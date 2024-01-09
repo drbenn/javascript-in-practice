@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>TS - Modules</h1>
+    <p>npm install typescript --save-dev</p>
+    <p>Create a TypeScript Configuration File: npx tsc --init</p>
+    <br><br>
+    <p>"npx tsc" is used to transform ts to js, it is helpful to put the output files in a seperate folder "dist"</p>
+    So make the following changes to tsconfig.json
+    <ul>
+        <li>"outDir": "./dist",   - all ts files will be compiled and placed into a seperate dist folder for easier organization</li>
+        <li>in index html now reference ----script type="module" src="dist/main.js"----   although main.ts is in the folder structure next to index.html, the output of main.js will be compiled to dist/main.js so the index.html must reference the compiled js file</li>
+        <li>If using modules will need to update tsconfig to the following es6 instead of es2016 and commonJs - "module": "es6" AND "module": "es6",   </li>
+    </ul>
+    <p>
+        package script for nodemon should also change to compile both ts and scss on each save/change of scss/ts -     "watch": "nodemon -e ts,scss -x \"npm run css && npx tsc\""
+    </p>
+    <br>
+    <p>in terminal: npm run watch and then in vsc start live server</p>
+
+
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>

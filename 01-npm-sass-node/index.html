@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>npm init -y   (-y flag means leave project blank)</h1>
+    <h1>npm i node-sass nodemon --save-dev</h1>
+    <h1> In npm
+        "scripts": {
+            "css": "node-sass --include-path scss path/to/file.scss path/to/output.css", 
+            "watch": "nodemon -e scss -x 'npm run css'"
+          }
+          or exactly
+          "scripts": {
+            "css": "node-sass --include-path scss styles.scss styles.css",
+            "watch": "nodemon -e scss -x 'npm run css'"
+          },
+    </h1>
+    <p>If you run npm run uglify-css , it will uglify that file you put in the first slot. Now at the “watch” , we are asking nodemon to run two commands after each SCSS file change is detected.</p>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
