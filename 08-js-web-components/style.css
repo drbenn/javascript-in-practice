@@ -13,6 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+hello-world {
+  font-weight: bold;
+  font-size: 36px;
+  color: hotpink;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
